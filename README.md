@@ -32,14 +32,15 @@
 	   NOTE: This will release all the handles and prevent memory leaks
 
   ## WHEN IMPORTING:
-  	1. You can use IMPORT_TO_BLOCK or IMPORT_TO_TABLE
-	     NOTE: 
+  
+  ### 1. You can use IMPORT_TO_BLOCK or IMPORT_TO_TABLE
+  	NOTE: 
  	     When using IMPORT_TO_BLOCK use IMPORT_CUSTOM_BLOCK function
 	     to assign values to your block. DO NOT edit the functions within
 	     this library unless you know what you are doing.
 	     When using IMPORT_TO_TABLE use IMPORT_CUSTOM_TABLE function
 	     to map fields and values.
-    	2. You can write your own custom importing function by using the following
+  ### 2. You can write your own custom importing function by using the following
 	     guide:
      
 		   IMPORT_INITIALIZE
