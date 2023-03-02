@@ -46,7 +46,7 @@
 		   --
 		   write your loop here and use GET_TEXT to fetch the data
 		    --
-	     IMPORT_TERMINATE
+	     	   IMPORT_TERMINATE
 
   ## CHANGE LOGS:
   	v1.0 Initial release
