@@ -1,27 +1,27 @@
-   	 _____ _______ ______ ______ __ ___ __		           ___      ______
+   	 _____ _______ ______ ______ __ ___ __		     ___      ______
    	|     |  __   |	  ___|	    |   |  |  |       __ __ |_  |    |___   |
    	|   --|	     -|   ___|	|   |-    -|  |__    |  |  | _| |_ __ 	 |  |
   	|_____|___|___|______|______|__|___|_____|    \___/ |_____|__|	 |__|
 
 
 
-  BRIEF:
+  ## BRIEF:
 	This package can programmatically produce a formatted excel file and also
 	import contents of excel file into a block or table.
   
-  REQUIREMENTS:
+  ## REQUIREMENTS:
 	WPSOffice or Excel and set either as default program.
 
-  HOW TO IMPORT:
+  ## HOW TO IMPORT:
  	Copy the following to your project:
 	1. CREOXL (Package Spec)
 	2. CREOXL (Package Body)
 	3. IMPORT_CUSTOM_BLOCK (Implementation is found in comments)
 	4. IMPORT_CUSTOM_TABLE (Implementation is found in comments)
 
-  HOW TO USE:
+  ## HOW TO USE:
 
-  WHEN GENERATING EXCEL FILE:
+  ## WHEN GENERATING EXCEL FILE:
   	1. Start with CREOXL.INITIALIZE;
   	2. Format your excel file using the available functions within this library
 	     to fit your needs. 
@@ -31,7 +31,7 @@
   	4. End with CREOXL.TERMINATE; 
 	     NOTE: This will release all the handles and prevent memory leaks
 
-  WHEN IMPORTING:
+  ## WHEN IMPORTING:
   	1. You can use IMPORT_TO_BLOCK or IMPORT_TO_TABLE
 	     NOTE: 
  	     When using IMPORT_TO_BLOCK use IMPORT_CUSTOM_BLOCK function
@@ -48,7 +48,7 @@
 		    --
 	     IMPORT_TERMINATE
 
-  CHANGE LOGS:
+  ## CHANGE LOGS:
   	v1.0 Initial release
   	v1.1 Now supports importing
 	       changed RELEASE_OBJECTS to TERMINATE
