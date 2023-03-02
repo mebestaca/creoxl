@@ -41,13 +41,11 @@
 	     When using IMPORT_TO_TABLE use IMPORT_CUSTOM_TABLE function
 	     to map fields and values.
   ### 2. You can write your own custom importing function by using the following
-	     guide:
-     
-		   IMPORT_INITIALIZE
-		   --
-		   write your loop here and use GET_TEXT to fetch the data
-		    --
-	     	   IMPORT_TERMINATE
+	   IMPORT_INITIALIZE
+	   --
+	   write your loop here and use GET_TEXT to fetch the data
+	    --
+     	   IMPORT_TERMINATE
 
   ## CHANGE LOGS:
   	v1.0 Initial release
