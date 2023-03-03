@@ -179,7 +179,7 @@ PACKAGE BODY CREOXL IS
 	// -	Applies P_STYLE on target cell represented by row and column values
 	// Usage
 	// -	CREOXL.SET_FONTSTYLE(1,1,'BOLD'); Result: A1 is now bold
-	// -  CREOXL.SET_FONTSTYLE(1,1,'ITALIC'); Result: A1 is now italic
+	// -  	CREOXL.SET_FONTSTYLE(1,1,'ITALIC'); Result: A1 is now italic
 	// -	CREOXL.SET_FONTSTYLE(1,1,'UNDERLINE'); Result: A1 is now underlined
 	**********************************************************************************/
 	PROCEDURE SET_FONTSTYLE(P_ROW IN VARCHAR2, P_COLUMN IN VARCHAR2, P_STYLE IN VARCHAR2) IS
@@ -242,7 +242,7 @@ PACKAGE BODY CREOXL IS
 	// -	CREOXL.SET_FONTNAME(1,1,1); Result: A1 now uses a different color
 	// Note:
 	// -	Color index is not experimented enough. Feel free to add color values under
-	//		'Known Colors' section
+	//	'Known Colors' section
 	// Known Colors:
 	// - 	None
 	**********************************************************************************/
@@ -266,7 +266,7 @@ PACKAGE BODY CREOXL IS
 	// -	CREOXL.SET_FONTNAME(1,1,1); Result: A1 now uses a different color
 	// Note:
 	// -	Color index is not experimented enough. Feel free to add color values under
-	//		'Known Colors' section
+	//	'Known Colors' section
 	// Known Colors:
 	// - 	None
 	**********************************************************************************/
@@ -419,7 +419,7 @@ PACKAGE BODY CREOXL IS
 	/**********************************************************************************
 	// Takes row, column and end_column returns nothing
 	// -	Applies full border on the target cell represented by row and column
-	// also applies full border on the next cells represented by end_column 
+	// 	also applies full border on the next cells represented by end_column 
 	**********************************************************************************/
 	PROCEDURE SET_FULLBORDER_RANGE(P_ROW IN NUMBER, P_START_COL IN NUMBER, P_END_COL IN NUMBER) IS
 			i number;
@@ -432,7 +432,7 @@ PACKAGE BODY CREOXL IS
 	/**********************************************************************************
 	// Takes row, column and end_column returns nothing
 	// -	Applies border on the target cell represented by row and column to the defined axis
-	// also applies full border on the next cells represented by end_column 
+	// 	also applies full border on the next cells represented by end_column 
 	**********************************************************************************/
 	PROCEDURE SET_BORDER_RANGE(P_ROW IN NUMBER, P_START_COL IN NUMBER, P_END_COL IN NUMBER, P_AXIS IN VARCHAR2) IS
 			i number;
@@ -445,10 +445,10 @@ PACKAGE BODY CREOXL IS
 	/**********************************************************************************
 	// Takes pathname returns nothing
 	// -	saves the file on the specified path
-	// -  include the filename at the end of the path when saving
+	// -	include the filename at the end of the path when saving
 	//		example:
 	//		CREOXL.SAVEAS('c:\csv\wassup.xls');
-	// -  dont use DISPLAY_OUTPUT when using SAVEAS
+	// -	dont use DISPLAY_OUTPUT when using SAVEAS
 	**********************************************************************************/
 	PROCEDURE SAVEAS(P_PATHNAME IN VARCHAR2) IS
 	BEGIN
@@ -462,7 +462,7 @@ PACKAGE BODY CREOXL IS
 	/**********************************************************************************
 	// Takes orientation returns nothing
 	// -	1 for portrait
-	// -  2 for landscape
+	// -	2 for landscape
 	**********************************************************************************/
 	PROCEDURE SET_ORIENTATION(P_ORIENTATION IN NUMBER) IS
 	BEGIN
@@ -505,14 +505,14 @@ PACKAGE BODY CREOXL IS
 	
 	/**********************************************************************************
 	// Takes pathname returns nothing
-	// - Use GET_FILE_NAME(directory_name => 'C:\',message => 'Select filename to Open.')
-	// command to safely find valid pathnames. This procedure will open a wps process
-	// so its imperative that you run IMPORT_TERMINATE after reading the file or it
-	// will create a new process everytime you read a file. 
+	// -	Use GET_FILE_NAME(directory_name => 'C:\',message => 'Select filename to Open.')
+	// 	command to safely find valid pathnames. This procedure will open a wps process
+	// 	so its imperative that you run IMPORT_TERMINATE after reading the file or it
+	// 	will create a new process everytime you read a file. 
 	//
 	// Note
-	// - Dont forget to run IMPORT_TERMINATE after reading a file to avoid memory
-	// leaks
+	// -	Dont forget to run IMPORT_TERMINATE after reading a file to avoid memory
+	// 	leaks
 	**********************************************************************************/
 	PROCEDURE IMPORT_INITIALIZE(P_PATHNAME IN VARCHAR2) IS
 	BEGIN
@@ -548,7 +548,7 @@ PACKAGE BODY CREOXL IS
 	// -	Imports the contents of the target .xlsx file to the target block
 	//
 	// Parameter specification
-	// -  P_PATHNAME is the destination of the file and filename
+	// -  	P_PATHNAME is the destination of the file and filename
 	// -	P_BLOCK_NAME is the target block. Use 'DUMMY' instead of ':DUMMY'
 	// -	P_ROW_START is the starting row where the data starts. Value is usually set to 1
 	//								when there is no header and 2 if there is.
@@ -556,7 +556,7 @@ PACKAGE BODY CREOXL IS
 	// - 	P_SUCCESS is the message returned when importing is successful
 	// -	P_FAIL is the message returned when importing fail
 	// -	ROW_COUNTER if you wanna track the number of affected rows you can use this value
-	// -  P_CUSTOM_MODE when set to true, you must implement IMPORT_CUSTOM_BLOCK to customize
+	// -  	P_CUSTOM_MODE when set to true, you must implement IMPORT_CUSTOM_BLOCK to customize
 	// 								the fields to fetch and where to fetch them to.
 	//
 	// Example:
@@ -580,9 +580,9 @@ PACKAGE BODY CREOXL IS
 	// Whats potentially inside 'c:\demo\path.xlsx':
 	// P_ROW_START is 2 for this example since we need to skip the first one
 	// First Name | Middle Initial | Last Name
-	//		 Edison |							 B |    Estaca
+	//     Edison |		     B |    Estaca
 	//      Clint |              I |  Florento
-	//	      ...	|						 ... |       ...
+	//   	  ... |		   ... |       ...
 	//--------------------------------------------------------------------------------
 	// NOTE: In the event when you need to import a file where you only need a few fields
 	// or not all the fields fit into the block in a convenient sequence, you need to set
@@ -679,11 +679,11 @@ PACKAGE BODY CREOXL IS
 	// 		P_PATHNAME - path of the target excel file
 	//		P_TABLE_NAME - name of the target table
 	//		P_ROW_START - starting row where the data starts. Value is usually set to 1
-	//								when there is no header and 2 if there is.
+	//				when there is no header and 2 if there is.
 	//		P_COLUMN_COUNT is the number of rows to be imported
 	//		P_BUFFER_SIZE - rows before reopening the file. 
 	// NOTE: When importing from a large file it may fail if you set your buffer too high 
-	//								and its going to be slow if its too low. 
+	//				and its going to be slow if its too low. 
 	// TIP: When importing from a file with over 20k rows set your buffer to 20k
 	//
 	// Example:
