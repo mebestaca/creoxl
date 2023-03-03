@@ -6,7 +6,7 @@
 
 
   ## BRIEF:
-	This package can programmatically produce a formatted excel file and also
+	This package written in PLSQL which aims to programmatically produce a formatted excel file and also
 	import contents of excel file into a block or table.
   
   ## REQUIREMENTS:
