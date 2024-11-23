@@ -6,9 +6,9 @@
 
 
   ## BRIEF:
-	This package is written in PLSQL which aims to programmatically produce 
-	a formatted excel file and also
-	import contents of excel file into a block or table.
+	This package is written in PLSQL designed to programmatically produce 
+	a formatted excel file. Additionally, it can also
+	import the contents of an excel file into a block or table.
   
   ## REQUIREMENTS:
 	WPSOffice or Excel and set either as default program.
